@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&family=Syne:wght@400;600;800&display=swap');
+html, body {
+  background: transparent !important;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Syne', sans-serif;
+  background: transparent;
+  color: #fff;
+}
+
+.zx-widget {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+
+  background: rgba(0, 0, 0, 0.75); /* 👈 THIS gives black inside only */
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  animation: zx-appear 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  min-width: 220px;
+}
+
+@keyframes zx-appear {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Left accent bar */
+.zx-widget::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 18%;
+  height: 64%;
+  width: 2.5px;
+  border-radius: 0 2px 2px 0;
+  background: linear-gradient(180deg, #c4a88e, #967969);
+  opacity: 0.9;
+}
+
+.zx-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+
+.zx-label {
+  font-family: 'Syne Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+#zx-datetime {
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 13.5px;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1;
+}
+
+/* Status dot section */
+.zx-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding-left: 12px;
+  border-left: 1px solid rgba(255,255,255,0.07);
+}
+
+.zx-dot-wrap {
+  position: relative;
+  width: 10px;
+  height: 10px;
+}
+
+.zx-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #967969;
+  box-shadow: 0 0 6px #967969, 0 0 12px rgba(150, 121, 105, 0.5);
+  animation: zx-pulse 2s ease-in-out infinite;
+}
+
+.zx-dot::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: rgba(150, 121, 105, 0.18);
+  animation: zx-ring 2s ease-in-out infinite;
+}
+
+@keyframes zx-pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 6px #967969, 0 0 12px rgba(150, 121, 105, 0.5); }
+  50%       { opacity: 0.55; box-shadow: 0 0 3px #967969; }
+}
+
+@keyframes zx-ring {
+  0%   { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+.zx-live-text {
+  font-family: 'Syne Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #967969;
+  opacity: 0.85;
+}

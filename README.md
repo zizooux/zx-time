@@ -1,2 +1,14 @@
-# zx-time
-zx-time &amp; date is a lightweight and optimized FiveM script that displays real-time in-game time and date with a clean, modern UI. It ensures smooth performance (0.00ms), easy setup, and full compatibility with QBCore, ESX, and standalone servers. Fully customizable to match any server style and enhance player immersion. 🚀
+zx-time & date is a lightweight and optimized FiveM script that displays the current in-game time and date with a clean and modern UI.
+
+Designed for performance and simplicity, this script provides real-time updates without affecting FPS. It fits perfectly with any server style, whether roleplay or casual.
+
+✨ Features:
+
+Real-time in-game time & date display
+Clean and modern UI design
+Fully optimized (0.00ms idle)
+Easy to install and configure
+Compatible with all frameworks (QBCore, ESX, Standalone)
+Customizable position and style
+
+Perfect for enhancing immersion and improving player experience.
